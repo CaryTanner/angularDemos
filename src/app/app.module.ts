@@ -5,14 +5,17 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import {FormsModule} from '@angular/forms';
 
-import { FilterPipe } from './filter.pipe'
+import { FilterPipe } from './filter.pipe';
+import { HighlightDirective } from './components/highlight.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     
-    FilterPipe
+    FilterPipe,
+    
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

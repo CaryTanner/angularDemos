@@ -34,10 +34,12 @@
       placeholder="Enter search text.."
       [(ngModel)]="searchText"
     />
-    <input type="submit" class="searchSubmit" value="SEARCH">
+    
   </form>
   <ul>
-      <li *ngFor="let todo of todos | appFilter: searchText">
+      <li *ngFor="let todo of todos | appFilter: searchText"
+      appHighlight [content]="todo" [searchedWord]="searchText"
+      [classToApply]="'font-weight-bold'" [setTitle]="'true'">
         {{todo.content}}
       </li>
   </ul>
